@@ -15,10 +15,11 @@ public:
           std::cout << "|";
         }
     }
+    std::cout << std::endl;
     if(i < 2){
       std::cout << " -----" << std::endl;
     }
-    std::cout << std:: endl;
+    //std::cout << std:: endl;
   }
   }
   Game(){
@@ -34,7 +35,7 @@ public:
   bool makeMove(int turn, int rowIn, int coLIn)
   {
 
-    if(rowIn <0 || rowIn >2 coLIn <0 || coLIn >2){
+    if (rowIn <0 || rowIn >2 || coLIn <0 || coLIn >2){
       std::cout << "That idn't a valid Move!!"<< std::endl;
       return false;
     }else if (board[rowIn][coLIn] != ' '){
@@ -57,6 +58,6 @@ private:
 
 
 
-}
+};
 
 #endif
